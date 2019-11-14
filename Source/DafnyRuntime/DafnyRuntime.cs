@@ -811,6 +811,9 @@ namespace Dafny
       T[] backing = ee;
       segment = new ArraySegment<T>(backing);
     }
+    public ArraySegment<T> UnsafeGetArraySegment() {
+      return segment;
+    }
     private Sequence(ArraySegment<T> segment_) {
       segment = segment_;
     }
